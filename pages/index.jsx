@@ -3,11 +3,27 @@ import BenefitCard from '../components/BenefitCard';
 import Icon from '../components/icon';
 import Navbar from '../components/navbar';
 import dynamic from 'next/dynamic';
+import React from 'react';
 // import { useEmblaCarousel } from 'embla-carousel/react';
 import Embla from '../components/embla';
 export default function Home() {
-  // const [emblaRef] = useEmblaCarousel();
-
+  const [activepost, setactivepost] = React.useState(0);
+  const scrollEvent = (e) => {
+    const target = e.target;
+    if (target.scrollTop >= 240 && target.scrollTop <= 479) {
+      setactivepost(1);
+    } else if (target.scrollTop >= 480 && target.scrollTop <= 719) {
+      setactivepost(2);
+    } else if (target.scrollTop >= 720 && target.scrollTop <= 959) {
+      setactivepost(3);
+    } else if (target.scrollTop >= 960 && target.scrollTop <= 1199) {
+      setactivepost(4);
+    } else if (target.scrollTop >= 1200) {
+      setactivepost(5);
+    } else {
+      setactivepost(0);
+    }
+  };
   return (
     <div>
       <Head>
@@ -92,32 +108,130 @@ export default function Home() {
         <div className='features-main'>
           <h1 className='fw500 fs32 lh24'>Features</h1>
           <div className='car-main'>
-            {/* <OwlCarousel
-              className='owl-theme collection-carousel'
-              loop={true}
-              dots={true}
-              nav={true}
-              navText={[
-                "<img src='CaretCircleLeft.png'>",
-                "<img src='CaretCircleRight.png'>",
-              ]}
-              responsive={{
-                0: {
-                  items: 1,
-                },
-                600: {
-                  items: 1,
-                },
-                1000: {
-                  items: 1,
-                },
-                10000: {
-                  items: 1,
-                },
-              }}
-            >
-            </OwlCarousel> */}
             <Embla />
+          </div>
+        </div>
+      </div>
+      <div className='container'>
+        <div className='solutions-main'>
+          <h2 className='fw500 fs32 lh24'>Solutions</h2>
+          <p className='fs18 lh22'>
+            Accurate™ is a fully digital cloud-based software platform with the
+            following modules:
+          </p>
+          <div className='scroll-main'>
+            <div>
+              <div className='mt-scroll-i'>
+                <h3 className={`${activepost == 0 ? 'active' : ''} fs16 lh20`}>
+                  Accurate Loan™
+                </h3>
+              </div>
+              <div className='mt-scroll-i'>
+                {' '}
+                <h3 className={`${activepost == 1 ? 'active' : ''} fs16 lh20`}>
+                  Accurate Guarantee™
+                </h3>
+              </div>
+              <div className='mt-scroll-i'>
+                <h3 className={`${activepost == 2 ? 'active' : ''} fs16 lh20`}>
+                  Acurrate Back-to-Back™
+                </h3>
+              </div>
+              <div className='mt-scroll-i'>
+                {' '}
+                <h3 className={`${activepost == 3 ? 'active' : ''} fs16 lh20`}>
+                  Accurate Cash Pool™
+                </h3>
+              </div>
+              <div className='mt-scroll-i'>
+                {' '}
+                <h3 className={`${activepost == 4 ? 'active' : ''} fs16 lh20`}>
+                  Accurate Treasury & Accounting™
+                </h3>
+              </div>
+              <div className='mt-scroll-i'>
+                {' '}
+                <h3 className={`${activepost == 5 ? 'active' : ''} fs16 lh20`}>
+                  Accurate Financing Advisory™
+                </h3>
+              </div>
+            </div>
+            <div class='support-scrollsnap'></div>
+
+            <div class='scroll-container' onScroll={scrollEvent}>
+              <div class='scroll-area'>
+                <div>
+                  <h4 className={`active fs16 lh20`}>
+                    Pricing, monitoring and documentation of intercompany loans
+                    based on OECD guidance.
+                  </h4>
+                </div>
+              </div>
+              <div class='scroll-area'>
+                <div>
+                  <h4 className={`active fs16 lh20`}>
+                    Pricing, monitoring and documentation of intercompany
+                    guarantees based on OECD guidance.
+                  </h4>
+                </div>
+              </div>
+              <div class='scroll-area'>
+                <div>
+                  <h4 className={`active fs16 lh20`}>
+                    Pricing, monitoring of intercompany back-to-back loans based
+                    on OECD guidance and he equity at risk approach
+                  </h4>
+                </div>
+              </div>
+              <div class='scroll-area'>
+                <div className='scr-top5'>
+                  <h4 className={`active fs16 lh20`}>
+                    Monitoring, control and documentation of cash pooling
+                    synergy allocation based on OECD guidance.
+                  </h4>
+                  <h4 className={`active fs16 lh20`}>
+                    Interested in becoming a pilot user?{' '}
+                    <span>Contact us!</span>{' '}
+                  </h4>
+                </div>
+              </div>
+              <div class='scroll-area'>
+                <div className='scr-top6'>
+                  <h4 className={`active fs16 lh20`}>
+                    Calculation, monitoring and notification of intercompany
+                    financial transaction charges
+                  </h4>
+                  <h4 className={`active fs16 lh20`}>
+                    Interested in becoming a pilot user?{' '}
+                    <span>Contact us!</span>{' '}
+                  </h4>
+                </div>
+              </div>
+              <div class='scroll-area'>
+                <div className='scr-top7'>
+                  <h4 className={`active fs16 lh20`}>
+                    Bespoke automated advisory of relevant considerations before
+                    issuing an intercompany financial transaction as well as
+                    real-time monitoring of active positions.
+                  </h4>
+                  <h4 className={`active fs16 lh20`}>
+                    Interested in becoming a pilot user?{' '}
+                    <span>Contact us!</span>
+                  </h4>
+                </div>
+              </div>
+            </div>
+            {/* <div>
+              <div className='scroll-cst scroll4'>
+                <div className='content-scrl'></div>
+              </div>
+            </div>
+            <div>
+              <h4 className={`active fs16 lh20`}>
+                Pricing, monitoring and documentation of intercompany loans
+                based on OECD guidance.
+              </h4>
+            </div> */}
           </div>
         </div>
       </div>

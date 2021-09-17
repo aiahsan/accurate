@@ -366,10 +366,12 @@ a {
 
 .embla__button--prev {
   left: 0px;
+  z-index: 11px;
 }
 
 .embla__button--next {
   right: 0px;
+  z-index: 11px;
 }
 
 .embla__dots {
@@ -434,4 +436,145 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.solutions-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+  margin-bottom: 96px;
+}
+.solutions-main p {
+  letter-spacing: -1px;
+
+  color: #8797ac;
+}
+
+.solutions-main h2 {
+  color: #12246c;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+.scroll-main {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+.scroll-main .active {
+  font-weight: 500;
+  color: #12246c !important;
+}
+.mt-scroll-i {
+  margin: 18px 0px;
+}
+.scroll-main h3 {
+  letter-spacing: -1px;
+  text-transform: uppercase;
+
+  color: rgba(18, 36, 108, 0.5);
+  text-align: right;
+  margin-right: 16px;
+}
+
+.scroll-main h4 span {
+  color: #48a6c9 !important;
+}
+.scroll-main h4 {
+  margin-left: 16px;
+  max-width: 460px;
+}
+
+.scroll4::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scroll4::-webkit-scrollbar-thumb {
+  background: #48a6c9;
+  border-radius: 4px;
+}
+
+.scroll4::-webkit-scrollbar-track {
+  background: rgba(18, 36, 108, 0.1);
+  border-radius: 4px;
+}
+.scroll-cst {
+  width: 5px;
+  height: 250px;
+  overflow: auto;
+  float: left;
+  margin: 0 0px;
+}
+
+.scroll-container,
+.scroll-area {
+  height: 240px;
+}
+
+.scroll-container {
+  overflow: auto;
+  direction: rtl;
+
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-area {
+  scroll-snap-align: start;
+}
+
+.scroll-container,
+.scroll-area {
+  margin: 0 auto;
+}
+
+.scroll-area {
+  display: flex;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.scroll-container::-webkit-scrollbar-track {
+  background: rgba(18, 36, 108, 0.1);
+  border-radius: 4px;
+}
+
+/* Handle */
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #48a6c9;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #2c687e;
+}
+.scroll-area:nth-of-type(2) h4 {
+  position: relative;
+  top: 42px;
+}
+.scroll-area:nth-of-type(3) h4 {
+  position: relative;
+  top: 73px;
+}
+.scroll-area:nth-of-type(4) h4 {
+  position: relative;
+  top: 73px;
+}
+.scr-top5 {
+  position: relative;
+  top: 37px;
+}
+.scr-top6 {
+  position: relative;
+  top: 151px;
+}
+.scr-top7 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
