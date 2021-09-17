@@ -98,6 +98,7 @@ a {
   margin: auto !important;
 }
 .nav-parent {
+  background-color: #f5f7ff;
 }
 
 .nav-parent .active {
@@ -181,6 +182,14 @@ a {
 .benefitcard h2 {
   margin: 32px 0px 22px 0px !important;
   letter-spacing: -1px;
+}
+.benefitcard:hover {
+  background: #ffffff;
+  border: 1px solid #e0e5ee;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px rgba(0, 44, 101, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
 }
 .benefitcard {
   width: 282px;
@@ -578,3 +587,31 @@ a {
   align-items: flex-end;
   justify-content: flex-end;
 }
+
+.benefitcard:nth-of-type(1):hover svg rect {
+  fill: #e2ffe3;
+}
+.benefitcard:nth-of-type(2):hover svg rect {
+  fill: #faedff;
+}
+.benefitcard:nth-of-type(3):hover svg rect {
+  fill: #ffecf4;
+}
+.benefitcard:nth-of-type(4):hover svg rect {
+  fill: #fff9e2;
+}
+.benefitcard:nth-of-type(5):hover svg rect {
+  fill: #e2e8ff;
+}
+.benefitcard:nth-of-type(6):hover svg rect {
+  fill: #dafbff;
+}
+.benefitcard:nth-of-type(7):hover svg rect {
+  fill: #ffece8;
+}
+.benefitcard:nth-of-type(8):hover svg rect {
+  fill: #e6f2ff;
+}
+/* .fixed-top {
+  background-color: #f5f7ff;
+} */

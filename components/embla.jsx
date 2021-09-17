@@ -45,8 +45,7 @@ const EmblaCarousel = ({ slides }) => {
                       <div>
                         {' '}
                         <div className='w-100ip'>
-                          <img className='w-100i1' src='g1.png' />
-                          <img src='g2.png' className='w-100i2' />
+                          <img className='w-100i3' src='g0.png' />
                         </div>
                       </div>
                     </div>
@@ -54,10 +53,12 @@ const EmblaCarousel = ({ slides }) => {
                       <h2 className='fw700 fs18 lh22'>
                         Fully Digital Platform
                       </h2>
-                      <p className='fw500 fs20 lh36'>
-                        Fully digital with real-time monitoring, document
-                        management and audit trail.
-                      </p>
+                      <div className='d-flex'>
+                        <p className='fw500 fs20 lh36'>
+                          Fully digital with real-time monitoring, document
+                          management and audit trail.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -122,11 +123,13 @@ const EmblaCarousel = ({ slides }) => {
                       <h2 className='fw700 fs18 lh22'>
                         Automated Report & Agreement Generation
                       </h2>
-                      <p className='fw500 fs20 lh36'>
-                        TP documentation reports and legal agreements
-                        automatically generated using our compliant templates or
-                        your custom templates
-                      </p>
+                      <div className='d-flex'>
+                        <p className='fw500 fs20 lh36'>
+                          TP documentation reports and legal agreements
+                          automatically generated using our compliant templates
+                          or your custom templates
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -208,10 +211,13 @@ const EmblaCarousel = ({ slides }) => {
                     </div>
                     <div className='f-box1-right mx-470'>
                       <h2 className='fw700 fs18 lh22'>Fully OECD Compliant</h2>
-                      <p className='fw500 fs20 lh36'>
-                        Compliant with Actions 4, 8-10 of the OECD BEPS Action
-                        Plan and best-practice financial theory.
-                      </p>
+                      <div className='d-flex'>
+                        {' '}
+                        <p className='fw500 fs20 lh36'>
+                          Compliant with Actions 4, 8-10 of the OECD BEPS Action
+                          Plan and best-practice financial theory.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -247,10 +253,12 @@ const EmblaCarousel = ({ slides }) => {
                       <h2 className='fw700 fs18 lh22'>
                         Fully Secure & Encrypted
                       </h2>
-                      <p className='fw500 fs20 lh36'>
-                        Secure and encrypted through Microsoft Azure, HTTPS,
-                        SSO, OWASP and more.
-                      </p>
+                      <div className='d-flex'>
+                        <p className='fw500 fs20 lh36'>
+                          Secure and encrypted through Microsoft Azure, HTTPS,
+                          SSO, OWASP and more.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

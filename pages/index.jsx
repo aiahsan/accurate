@@ -112,6 +112,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className='container'>
         <div className='solutions-main'>
           <h2 className='fw500 fs32 lh24'>Solutions</h2>
@@ -156,10 +157,10 @@ export default function Home() {
                 </h3>
               </div>
             </div>
-            <div class='support-scrollsnap'></div>
+            <div className='support-scrollsnap'></div>
 
-            <div class='scroll-container' onScroll={scrollEvent}>
-              <div class='scroll-area'>
+            <div className='scroll-container' onScroll={scrollEvent}>
+              <div className='scroll-area'>
                 <div>
                   <h4 className={`active fs16 lh20`}>
                     Pricing, monitoring and documentation of intercompany loans
@@ -167,7 +168,7 @@ export default function Home() {
                   </h4>
                 </div>
               </div>
-              <div class='scroll-area'>
+              <div className='scroll-area'>
                 <div>
                   <h4 className={`active fs16 lh20`}>
                     Pricing, monitoring and documentation of intercompany
@@ -175,7 +176,7 @@ export default function Home() {
                   </h4>
                 </div>
               </div>
-              <div class='scroll-area'>
+              <div className='scroll-area'>
                 <div>
                   <h4 className={`active fs16 lh20`}>
                     Pricing, monitoring of intercompany back-to-back loans based
@@ -183,7 +184,7 @@ export default function Home() {
                   </h4>
                 </div>
               </div>
-              <div class='scroll-area'>
+              <div className='scroll-area'>
                 <div className='scr-top5'>
                   <h4 className={`active fs16 lh20`}>
                     Monitoring, control and documentation of cash pooling
@@ -195,7 +196,7 @@ export default function Home() {
                   </h4>
                 </div>
               </div>
-              <div class='scroll-area'>
+              <div className='scroll-area'>
                 <div className='scr-top6'>
                   <h4 className={`active fs16 lh20`}>
                     Calculation, monitoring and notification of intercompany
@@ -207,7 +208,7 @@ export default function Home() {
                   </h4>
                 </div>
               </div>
-              <div class='scroll-area'>
+              <div className='scroll-area'>
                 <div className='scr-top7'>
                   <h4 className={`active fs16 lh20`}>
                     Bespoke automated advisory of relevant considerations before
@@ -221,17 +222,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* <div>
-              <div className='scroll-cst scroll4'>
-                <div className='content-scrl'></div>
-              </div>
-            </div>
-            <div>
-              <h4 className={`active fs16 lh20`}>
-                Pricing, monitoring and documentation of intercompany loans
-                based on OECD guidance.
-              </h4>
-            </div> */}
           </div>
         </div>
       </div>

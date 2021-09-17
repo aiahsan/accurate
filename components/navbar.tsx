@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import Icon from './icon';
-export default () => {
+export default function NavCst() {
   return (
-    <div className='nav-parent'>
+    <div className='nav-parent fixed-top'>
       <Navbar collapseOnSelect className='container' expand='lg'>
         <Navbar.Brand href='#home'>
           <Icon name='logo' />
@@ -32,4 +32,4 @@ export default () => {
       </Navbar>
     </div>
   );
-};
+}
