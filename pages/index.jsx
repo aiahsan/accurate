@@ -2,7 +2,7 @@ import Head from 'next/head';
 import BenefitCard from '../components/BenefitCard';
 import Navbar from '../components/navbar';
 import Contact from '../components/getInTouchForm';
-import React from 'react';
+import React, { useRef } from 'react';
 import {
   Link,
   DirectLink,
@@ -32,6 +32,7 @@ export default function Home() {
       setactivepost(0);
     }
   };
+  const ref = useRef();
   return (
     <div>
       <Head>
@@ -138,7 +139,11 @@ export default function Home() {
               <div>
                 <div className='mt-scroll-i'>
                   <h3
-                    className={`${activepost == 0 ? 'active' : ''} fs16 lh20`}
+                    onClick={() => {
+                      ref.current.scrollTop = 0;
+                      setactivepost(0);
+                    }}
+                    className={`${activepost == 0 ? 'active ' : ''} fs16 lh20`}
                   >
                     Accurate Loan™
                   </h3>
@@ -146,6 +151,10 @@ export default function Home() {
                 <div className='mt-scroll-i'>
                   {' '}
                   <h3
+                    onClick={() => {
+                      ref.current.scrollTop = 240;
+                      setactivepost(1);
+                    }}
                     className={`${activepost == 1 ? 'active' : ''} fs16 lh20`}
                   >
                     Accurate Guarantee™
@@ -153,6 +162,10 @@ export default function Home() {
                 </div>
                 <div className='mt-scroll-i'>
                   <h3
+                    onClick={() => {
+                      ref.current.scrollTop = 480;
+                      setactivepost(2);
+                    }}
                     className={`${activepost == 2 ? 'active' : ''} fs16 lh20`}
                   >
                     Acurrate Back-to-Back™
@@ -161,6 +174,10 @@ export default function Home() {
                 <div className='mt-scroll-i'>
                   {' '}
                   <h3
+                    onClick={() => {
+                      ref.current.scrollTop = 720;
+                      setactivepost(3);
+                    }}
                     className={`${activepost == 3 ? 'active' : ''} fs16 lh20`}
                   >
                     Accurate Cash Pool™
@@ -169,6 +186,10 @@ export default function Home() {
                 <div className='mt-scroll-i'>
                   {' '}
                   <h3
+                    onClick={() => {
+                      ref.current.scrollTop = 960;
+                      setactivepost(4);
+                    }}
                     className={`${activepost == 4 ? 'active' : ''} fs16 lh20`}
                   >
                     Accurate Treasury & Accounting™
@@ -177,6 +198,10 @@ export default function Home() {
                 <div className='mt-scroll-i'>
                   {' '}
                   <h3
+                    onClick={() => {
+                      ref.current.scrollTop = 1200;
+                      setactivepost(5);
+                    }}
                     className={`${activepost == 5 ? 'active' : ''} fs16 lh20`}
                   >
                     Accurate Financing Advisory™
@@ -185,10 +210,14 @@ export default function Home() {
               </div>
               <div className='support-scrollsnap'></div>
 
-              <div className='scroll-container' onScroll={scrollEvent}>
+              <div
+                className='scroll-container'
+                ref={ref}
+                onScroll={scrollEvent}
+              >
                 <div className='scroll-area'>
                   <div>
-                    <h4 className={`active fs16 lh20`}>
+                    <h4 className={`active fade-in-image fs16 lh20`}>
                       Pricing, monitoring and documentation of intercompany
                       loans based on OECD guidance.
                     </h4>

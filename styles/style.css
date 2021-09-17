@@ -720,3 +720,7 @@ a {
   color: #8797ac;
   margin-right: 24px;
 }
+
+.mt-scroll-i h3 {
+  cursor: pointer;
+}
