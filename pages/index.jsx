@@ -3,13 +3,11 @@ import BenefitCard from '../components/BenefitCard';
 import Icon from '../components/icon';
 import Navbar from '../components/navbar';
 import dynamic from 'next/dynamic';
-import Carousel from 'react-multi-carousel';
-const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });
-
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-
+// import { useEmblaCarousel } from 'embla-carousel/react';
+import Embla from '../components/embla';
 export default function Home() {
+  // const [emblaRef] = useEmblaCarousel();
+
   return (
     <div>
       <Head>
@@ -94,7 +92,7 @@ export default function Home() {
         <div className='features-main'>
           <h1 className='fw500 fs32 lh24'>Features</h1>
           <div className='car-main'>
-            <OwlCarousel
+            {/* <OwlCarousel
               className='owl-theme collection-carousel'
               loop={true}
               dots={true}
@@ -118,10 +116,8 @@ export default function Home() {
                 },
               }}
             >
-              <div className='item'>
-                <h1>sd</h1>
-              </div>
-            </OwlCarousel>
+            </OwlCarousel> */}
+            <Embla />
           </div>
         </div>
       </div>
