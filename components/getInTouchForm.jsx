@@ -5,7 +5,7 @@ import { repository } from '../utiles/repository';
 import { useRecaptcha } from "react-hook-recaptcha";
 import Loading from "../components/loading";
 
-const sitekey = "6LdhbYAcAAAAAEeMpBQD0GNX4GITLCcXH1AHIR_U";  // change to your sitekey
+const sitekey = "6LfuMoQcAAAAAHcPE5qllK7XfT00PTEByMnUZSVQ";  // change to your sitekey
 const containerId = "test-recaptcha";  // this id can be customized
 
 const DisplayingErrorMessagesSchema = Yup.object().shape({
