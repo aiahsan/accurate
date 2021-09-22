@@ -2,6 +2,12 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { repository } from '../utiles/repository';
+import { useRecaptcha } from "react-hook-recaptcha";
+import Loading from "../components/loading";
+
+const sitekey = "6LdhbYAcAAAAAEeMpBQD0GNX4GITLCcXH1AHIR_U";  // change to your sitekey
+const containerId = "test-recaptcha";  // this id can be customized
+
 const DisplayingErrorMessagesSchema = Yup.object().shape({
   email: Yup.string().required('Required').email(),
   name: Yup.string().required('Required'),
@@ -10,21 +16,39 @@ const DisplayingErrorMessagesSchema = Yup.object().shape({
   message: Yup.string().required('Required'),
 });
 
-export default ({ setshowmessage, setmessage, setshowanimation }) => {
+export default ({ setshowmessage, setmessage, setshowAnimation ,showAnimation}) => {
+  const [captchaResponse, setCaptchaResponse] = React.useState(null);
+  const successCallback = (response) => {
+    setCaptchaResponse(response);
+  };
+  const expiredCallback = () => setCaptchaResponse(null);
+  if (process.browser) {
+    useRecaptcha({
+      containerId,
+      successCallback,
+      expiredCallback,
+      sitekey,
+      size: "normal",
+    });
+  }
+  
   const postData = async (datapost) => {
-    setshowanimation(true);
-    const { data, status } = await repository.contact(datapost).then((x) => x);
+    setshowAnimation(true);
+  
+     const { data, status } = await repository.contact(datapost).then((x) => x);
     if (status == 200) {
       setmessage(data.message);
       setshowmessage(true);
-      setshowanimation(false);
+      setshowAnimation(false);
     } else {
       setmessage(
         data && data.message ? data.message : 'Opps something went wrong'
       );
       setshowmessage(true);
-      setshowanimation(false);
+      setshowAnimation(false);
     }
+    expiredCallback( )
+    
   };
   return (
     <>
@@ -39,6 +63,7 @@ export default ({ setshowmessage, setmessage, setshowanimation }) => {
         }}
         validationSchema={DisplayingErrorMessagesSchema}
         onSubmit={async (values, { setSubmitting }) => {
+         
           await postData(values);
         }}
       >
@@ -52,18 +77,18 @@ export default ({ setshowmessage, setmessage, setshowanimation }) => {
                 can benefit your organization
               </p>
               <div className='row'>
-                <div className='col-lg-6 mt-4'>
+                <div className='col-lg-6 '>
                   <input
                     type='text'
                     placeholder='Name'
                     className=''
-                    {...getFieldProps('Name')}
+                    {...getFieldProps('name')}
                   />
                   {touched.name && errors.name && (
                     <div className='erorr'>{errors.name}</div>
                   )}
                 </div>
-                <div className='col-lg-6 mt-4'>
+                <div className='col-lg-6  '>
                   <input
                     type='text'
                     placeholder='Email'
@@ -74,7 +99,7 @@ export default ({ setshowmessage, setmessage, setshowanimation }) => {
                     <div className='erorr'>{errors.email}</div>
                   )}
                 </div>
-                <div className='col-lg-6 mt-4'>
+                <div className='col-lg-6 '>
                   <input
                     type='text'
                     placeholder='Company*'
@@ -85,7 +110,7 @@ export default ({ setshowmessage, setmessage, setshowanimation }) => {
                     <div className='erorr'>{errors.company}</div>
                   )}
                 </div>
-                <div className='col-lg-6 mt-4'>
+                <div className='col-lg-6 '>
                   <input
                     type='text'
                     placeholder='Phone*'
@@ -96,7 +121,7 @@ export default ({ setshowmessage, setmessage, setshowanimation }) => {
                     <div className='erorr'>{errors.phone}</div>
                   )}
                 </div>
-                <div className='col-12 mt-4'>
+                <div className='col-12  '>
                   <textarea
                     name
                     id
@@ -111,9 +136,11 @@ export default ({ setshowmessage, setmessage, setshowanimation }) => {
                     <div className='erorr'>{errors.message}</div>
                   )}
                 </div>
-                <div className='col-12 mt-4 text-center'>
-                  <button className='btn' type='submit'>
-                    Submit
+                <div className='col-12  text-center d-flex justify-content-between align-items-center'>
+                <div id={containerId} className="g-recaptcha" />
+
+                  <button disabled={!captchaResponse} type="submit" className='btn btn-cst' >
+                  {showAnimation == true ? <Loading /> : " Submit"} 
                   </button>
                 </div>
               </div>

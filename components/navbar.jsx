@@ -10,16 +10,17 @@ import {
   scrollSpy,
   scroller,
 } from 'react-scroll';
-export default function NavCst() {
+export default function NavCst({showNav}) {
   return (
     <div className='nav-parent fixed-top'>
       <Navbar collapseOnSelect className='container' expand='lg'>
-        <Navbar.Brand href='#home'>
+        <Navbar.Brand href='/'>
           <Icon name='logo' />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-        <Navbar.Collapse id='responsive-navbar-nav'>
-          <Nav className='mr-auto'></Nav>
+  {showNav!=false?        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+:<></>}
+          <Navbar.Collapse id='responsive-navbar-nav'>
+         {showNav!=false?<> <Nav className='mr-auto'></Nav>
           <Nav className='nav-right'>
             <Link
               activeclass='active'
@@ -72,7 +73,10 @@ export default function NavCst() {
               Contact us
             </Link>
           </Nav>
-        </Navbar.Collapse>
+          </>
+  :<></>  
+  }
+             </Navbar.Collapse>
       </Navbar>
     </div>
   );

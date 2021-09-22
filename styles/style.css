@@ -526,13 +526,14 @@ a {
 
 .scroll-container {
   overflow: auto;
-  direction: rtl;
+   transform: scaleX(-1);
 
   scroll-snap-type: y mandatory;
 }
 
 .scroll-area {
   scroll-snap-align: start;
+  transform: scaleX(-1);
 }
 
 .scroll-container,
@@ -670,6 +671,7 @@ a {
   border-radius: 4px;
   padding: 15px;
   width: 100%;
+  margin-top: 16px;
 }
 .footer button {
   background: #12246c;
@@ -724,3 +726,37 @@ a {
 .mt-scroll-i h3 {
   cursor: pointer;
 }
+
+.embla__button:focus,.embla__button:active{
+  outline: none;
+}
+.footer input{
+  max-height: 50px;
+}
+.footer textarea{
+  height: 119px;
+}
+.erorr{
+  color: red;
+}
+.posanimatiom {
+  position: relative;
+    top: -14px;
+}
+.btn-cst
+{
+width: 100px;
+height: 41px;
+}
+
+.messagebox
+{position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10000;
+  background-color: white;
+  padding: 10px 37px;}
+
+  .iframe .gm-style{
+    display: none!important;
+  }
