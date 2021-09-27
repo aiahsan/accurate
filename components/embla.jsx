@@ -256,7 +256,7 @@ const EmblaCarousel = ({ slides }) => {
                       </h2>
                       <div className='d-flex'>
                         <p className='fw500 fs20 lh36'>
-                        Secure and encrypted through Microsoft Azure, HTTPS, SSO, OWASP and more.All servers are based in Germany.
+                        Secure and encrypted through Microsoft Azure, HTTPS, SSO, OWASP and more. All servers are based in Germany.
                         </p>
                       </div>
                     </div>

@@ -120,7 +120,7 @@ export default function Home() {
               <BenefitCard
                 icon='c4'
                 title='Facilitate Collabortion'
-                description='Improve collaboration and visibility across internal departments with a centralized platform and workflow managemen'
+                description='Improve collaboration and visibility across internal departments with a centralized platform and workflow management'
               />
               <BenefitCard
                 icon='c5'
@@ -197,7 +197,7 @@ export default function Home() {
                     }}
                     className={`${activepost == 2 ? 'active' : ''} fs16 lh20`}
                   >
-                    Acurrate Back-to-Back™
+                    Accurate Back-to-Back™
                   </h3>
                 </div>
                 <div className='mt-scroll-i'>
@@ -263,7 +263,7 @@ export default function Home() {
                 <div className='scroll-area'>
                   <div>
                     <h4 className={`active fs16 lh24`}>
-                    Pricing, monitoring, and documentation of of intercompany back-to-back loans based on OECD guidance and the equity at risk approach.
+                    Pricing, monitoring and documentation of intercompany back-to-back loans based on OECD guidance and the equity at risk approach.
                     </h4>
                   </div>
                 </div>

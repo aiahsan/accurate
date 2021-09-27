@@ -60,6 +60,8 @@ export default ({ setshowmessage, setmessage, setshowAnimation ,showAnimation}) 
           email: '',
           message: '',
         }}
+        validateOnChange={false}
+        validateOnBlur={false}
         validationSchema={DisplayingErrorMessagesSchema}
         onSubmit={async (values, { setSubmitting }) => {
          
@@ -81,9 +83,10 @@ export default ({ setshowmessage, setmessage, setshowAnimation ,showAnimation}) 
                     type='text'
                     placeholder='Name*'
                     className=''
+                   
                     {...getFieldProps('name')}
                   />
-                  {touched.name && errors.name && (
+                  {  errors.name && (
                     <div className='erorr'>{errors.name}</div>
                   )}
                 </div>
@@ -94,7 +97,7 @@ export default ({ setshowmessage, setmessage, setshowAnimation ,showAnimation}) 
                     className=''
                     {...getFieldProps('email')}
                   />{' '}
-                  {touched.email && errors.email && (
+                  { errors.email && (
                     <div className='erorr'>{errors.email}</div>
                   )}
                 </div>
@@ -105,7 +108,7 @@ export default ({ setshowmessage, setmessage, setshowAnimation ,showAnimation}) 
                     className=''
                     {...getFieldProps('company')}
                   />
-                  {touched.company && errors.company && (
+                  {  errors.company && (
                     <div className='erorr'>{errors.company}</div>
                   )}
                 </div>
@@ -129,8 +132,8 @@ export default ({ setshowmessage, setmessage, setshowAnimation ,showAnimation}) 
                     defaultValue={''}
                     {...getFieldProps('message')}
                   />
-                  {touched.message && errors.message && (
-                    <div className='erorr' style={{marginBottom:16}}>{errors.message}</div>
+                  { errors.message && (
+                    <div className='erorr' style={{marginBottom:16,marginTop:-7}}>{errors.message}</div>
                   )}
                 </div>
                 <div className='btn-cst-hs3 col-12  text-center d-flex justify-content-between align-items-center'>
