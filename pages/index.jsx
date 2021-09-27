@@ -75,20 +75,20 @@ export default function Home() {
                 The most powerful and comprehensive financial transfer pricing
                 software platform
               </p>
-              <button  className='btn btn-nav fw500 fs14 lh17'>
               <Link
              
-              to='Contact'
-              spy={true}
-              smooth={true}
-              duration={250}>
+             to='Contact'
+             spy={true}
+             smooth={true}
+             duration={250}>
+              <button  className='btn btn-nav fw500 fs14 lh17'>
+             
                 Schedule a demo
-              </Link>
+            
               </button>
-
+              </Link>
               <h2 className='fw500 fs14 lh17'>
-                Accurate™ is used by multibillion dollar multinationals in over
-                100 countries
+              The platform is currently licensed by multi-billion dollar multinationals with presence in over 100 countries
               </h2>
             </div>
             <div className='w-100 herro1-rg'>
@@ -120,7 +120,7 @@ export default function Home() {
               <BenefitCard
                 icon='c4'
                 title='Facilitate Collabortion'
-                description='Improve collaboration and visibility across internal departments with a centralized platform'
+                description='Improve collaboration and visibility across internal departments with a centralized platform and workflow managemen'
               />
               <BenefitCard
                 icon='c5'
@@ -130,17 +130,17 @@ export default function Home() {
               <BenefitCard
                 icon='c6'
                 title='Increase Quality'
-                description='Ensure precise results and documentation by eliminating the human error and inconsistency inherent in traditional manual pricing approaches'
+                description='Ensure precise results and documentation by eliminating the human error and inconsistency inherent in traditional manual approaches'
               />
               <BenefitCard
                 icon='c7'
                 title='Reduce Controversy'
-                description={`Avoid audits by pricing and documenting all intercompany financial transactions at arm's length no matter how small or large`}
+                description={`Avoid audits by pricing and documenting all intercompany financial transactions at arm's length`}
               />
               <BenefitCard
                 icon='c8'
                 title='Gain Independence'
-                description='Free up internal time and reduce dependence on external advisors'
+                description='Reduce dependence on external advisors and free up internal resources'
               />
             </div>
           </div>
@@ -246,7 +246,7 @@ export default function Home() {
               >
                 <div className='scroll-area'>
                   <div>
-                    <h4 className={`active fade-in-image fs16 lh20`}>
+                    <h4 className={`active fade-in-image fs16 lh24`}>
                       Pricing, monitoring and documentation of intercompany
                       loans based on OECD guidance.
                     </h4>
@@ -254,7 +254,7 @@ export default function Home() {
                 </div>
                 <div className='scroll-area'>
                   <div>
-                    <h4 className={`active fs16 lh20`}>
+                    <h4 className={`active fs16 lh24`}>
                       Pricing, monitoring and documentation of intercompany
                       guarantees based on OECD guidance.
                     </h4>
@@ -262,19 +262,18 @@ export default function Home() {
                 </div>
                 <div className='scroll-area'>
                   <div>
-                    <h4 className={`active fs16 lh20`}>
-                      Pricing, monitoring of intercompany back-to-back loans
-                      based on OECD guidance and he equity at risk approach
+                    <h4 className={`active fs16 lh24`}>
+                    Pricing, monitoring, and documentation of of intercompany back-to-back loans based on OECD guidance and the equity at risk approach.
                     </h4>
                   </div>
                 </div>
                 <div className='scroll-area'>
                   <div className='scr-top5'>
-                    <h4 className={`active fs16 lh20`}>
+                    <h4 className={`active fs16 lh24`}>
                       Monitoring, control and documentation of cash pooling
                       synergy allocation based on OECD guidance.
                     </h4>
-                    <h4 className={`active fs16 lh20`}>
+                    <h4 className={`active fs16 lh24`}>
                       Interested in becoming a pilot user?{' '}
                       <span>Contact us!</span>{' '}
                     </h4>
@@ -282,11 +281,11 @@ export default function Home() {
                 </div>
                 <div className='scroll-area'>
                   <div className='scr-top6'>
-                    <h4 className={`active fs16 lh20`}>
+                    <h4 className={`active fs16 lh24`}>
                       Calculation, monitoring and notification of intercompany
-                      financial transaction charges
+                      financial transaction charges.
                     </h4>
-                    <h4 className={`active fs16 lh20`}>
+                    <h4 className={`active fs16 lh24`}>
                       Interested in becoming a pilot user?{' '}
                       <span>Contact us!</span>{' '}
                     </h4>
@@ -294,12 +293,12 @@ export default function Home() {
                 </div>
                 <div className='scroll-area'>
                   <div className='scr-top7'>
-                    <h4 className={`active fs16 lh20`}>
+                    <h4 className={`active fs16 lh24`}>
                       Bespoke automated advisory of relevant considerations
                       before issuing an intercompany financial transaction as
                       well as real-time monitoring of active positions.
                     </h4>
-                    <h4 className={`active fs16 lh20`}>
+                    <h4 className={`active fs16 lh24`}>
                       Interested in becoming a pilot user?{' '}
                       <span>Contact us!</span>
                     </h4>
@@ -320,7 +319,7 @@ export default function Home() {
             </div>
             <div className='col-md-6'>
               <div style={{ width: '100%' }}>
-                <div className='d-flex'>
+                {/* <div className='d-flex'>
                   <div className='map-head'>
                     <p className='fw600 fs16 lh30'>Address</p>
                     <h2 className='fw500 fs16 lh24'>
@@ -332,15 +331,16 @@ export default function Home() {
                     <h2 className='fw500 fs16 lh24'>contact@tpaccurate.com</h2>
                   </div>
                 </div>
-                <div style={{width: '100%', overflow: 'hidden', height: '319px'}}>
+           */}
+                <div style={{width: '100%', overflow: 'hidden', height: '420px'}}>
                 <iframe
                   width='100%'
-                  height={600}
+                  height={670}
                   frameBorder={0}
                   scrolling='no'
                   marginHeight={0}
                   marginWidth={0}
-                  style={{border:0,marginTop:-150}}
+                  style={{border:0,marginTop:-140}}
                   src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Tordenskiolds%20gate%202,%200160%20Oslo+()&t=&z=14&ie=UTF8&iwloc=B&output=embed"
                 />
                 </div>
@@ -349,7 +349,7 @@ export default function Home() {
             </div>
           </div>
           <hr className='footer-rd'></hr>
-          <div className='d-flex justify-content-between align-items-center'>
+          <div className='d-flex justify-content-between align-items-center df-x1'>
             <div>
               <Icon name='logo' />
             </div>

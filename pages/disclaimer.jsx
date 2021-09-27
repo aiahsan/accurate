@@ -73,43 +73,9 @@ export default function Home() {
     </div>  
       <Element name='Contact' className='footer'>
         <div className='container'>
-          <h1>Contact us</h1>
-
-          <div className='row'>
-            <div className='col-md-6'>
-            <Contact setmessage={setmessage} showAnimation={showAnimation} setshowmessage={setshowmessage} setshowAnimation={setshowAnimation} />
-                </div>
-            <div className='col-md-6'>
-              <div style={{ width: '100%' }}>
-                <div className='d-flex'>
-                  <div className='map-head'>
-                    <p className='fw600 fs16 lh30'>Address</p>
-                    <h2 className='fw500 fs16 lh24'>
-                      Tordenskiolds gate 2, 0160 Oslo, Norway
-                    </h2>
-                  </div>
-                  <div className='map-head'>
-                    <p className='fw600 fs16 lh30'>CONTACT</p>
-                    <h2 className='fw500 fs16 lh24'>contact@tpaccurate.com</h2>
-                  </div>
-                </div>
-                <div style={{width: '100%', overflow: 'hidden', height: '319px'}}>
-                <iframe
-                  width='100%'
-                  height={600}
-                  frameBorder={0}
-                  scrolling='no'
-                  marginHeight={0}
-                  marginWidth={0}
-                  style={{border:0,marginTop:-150}}
-                  src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Tordenskiolds%20gate%202,%200160%20Oslo+()&t=&z=14&ie=UTF8&iwloc=B&output=embed"
-                />
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr className='footer-rd'></hr>
-          <div className='d-flex justify-content-between align-items-center'>
+          
+         <hr className='footer-rd'></hr>
+          <div className='d-flex justify-content-between align-items-center df-x1'>
             <div>
               <Icon name='logo' />
             </div>

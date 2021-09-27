@@ -22,6 +22,49 @@
   }
 }
 
+@media screen and (max-width: 991px) {
+.embla__button{
+  display: none;
+}
+}
+@media screen and (max-width: 837px) {
+  .footer input:nth-child(1)
+  {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer-end p
+  {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+  .footer-end,.df-x1{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 396px) {
+  .btn-cst-hs3
+  {
+    flex-direction: column;
+  }
+  .btn-cst-hs3 button
+  {
+    margin: 16px 0px;
+  }
+  .scr-top6{
+    top:108px!important;
+  }
+  .scr-top5{
+      top: 0px!important;
+  }
+}
+@media screen and (max-width: 1230px) {
+  .herro1-rg img
+  {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 320px) {
   .scr-top6 {
     position: relative;

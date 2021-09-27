@@ -4,8 +4,10 @@ import { useEmblaCarousel } from 'embla-carousel/react';
 import Icon from './icon';
 
 const EmblaCarousel = ({ slides }) => {
-  const [viewportRef, embla] = useEmblaCarousel({ skipSnaps: false });
-  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
+  const [viewportRef, embla] = useEmblaCarousel({
+    loop: true,
+    skipSnaps: false
+  });  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
@@ -45,7 +47,7 @@ const EmblaCarousel = ({ slides }) => {
                       <div>
                         {' '}
                         <div className='w-100ip'>
-                          <img className='w-100i3' src='g0.png' />
+                          <img className='w-100i3 fi1' src='g0.png' />
                         </div>
                       </div>
                     </div>
@@ -73,7 +75,7 @@ const EmblaCarousel = ({ slides }) => {
                       <div>
                         {' '}
                         <div className='w-100ip'>
-                          <img className='w-100i3' src='g3.png' />
+                          <img className='w-100i3 fi2' src='g3.png' />
                         </div>
                       </div>
                     </div>
@@ -81,13 +83,13 @@ const EmblaCarousel = ({ slides }) => {
                       <h2 className='fw700 fs18 lh22'>
                         EU ESMA Certified Credit Rating Model
                       </h2>
-                      <div className='d-flex align-items-center spmodal'>
+                      <div className='d-flex spmodal'>
                         <Icon name='arb' />
                         <p className='fw500 fs18 lh27'>
                           Proprietary implicit support model
                         </p>
                       </div>
-                      <div className='d-flex align-items-center spmodal'>
+                      <div className='d-flex spmodal'>
                         <Icon name='arb' />
                         <p className='fw500 fs18 lh27'>
                           Solvency, liquidity and profitability ratio peer group
@@ -95,7 +97,7 @@ const EmblaCarousel = ({ slides }) => {
                         </p>
                       </div>
 
-                      <div className='d-flex align-items-center spmodal'>
+                      <div className='d-flex spmodal'>
                         <Icon name='arb' />
                         <p className='fw500 fs18 lh27'>
                           Delineation of transaction as equity or debt
@@ -110,12 +112,12 @@ const EmblaCarousel = ({ slides }) => {
               <div className='embla__slide__inner'>
                 {' '}
                 <div className='item'>
-                  <div className='flex-row-b f-box1'>
+                  <div className='flex-row-b f-box1 f-box2 '>
                     <div className='f-box1-left'>
                       <div>
                         {' '}
                         <div className='w-100ip'>
-                          <img className='w-100i3' src='g4.png' />
+                          <img className='w-100i3 fi3' src='g4.png' />
                         </div>
                       </div>
                     </div>
@@ -125,9 +127,8 @@ const EmblaCarousel = ({ slides }) => {
                       </h2>
                       <div className='d-flex'>
                         <p className='fw500 fs20 lh36'>
-                          TP documentation reports and legal agreements
-                          automatically generated using our compliant templates
-                          or your custom templates
+                        TP documentation reports and legal agreements automatically generated using our compliant templates or your custom templates.
+
                         </p>
                       </div>
                     </div>
@@ -139,53 +140,53 @@ const EmblaCarousel = ({ slides }) => {
               <div className='embla__slide__inner'>
                 {' '}
                 <div className='item'>
-                  <div className='flex-row-b f-box1'>
+                  <div className='flex-row-b f-box1 f-box2'>
                     <div className='f-box1-left'>
                       <div>
                         {' '}
                         <div className='w-100ip'>
-                          <img className='w-100i3' src='g5.png' />
+                          <img className='w-100i3 fi4' src='g5.png' />
                         </div>
                       </div>
                     </div>
                     <div className='f-box1-right'>
                       <h2 className='fw700 fs18 lh22'>Industry Leading Data</h2>
-                      <div className='d-flex align-items-center spmodal'>
+                      <div className='d-flex spmodal'>
                         <Icon name='arb' />
                         <p className='fw500 fs18 lh27'>
                           2+ million bond curves added daily
                         </p>
                       </div>
-                      <div className='d-flex align-items-center spmodal'>
+                      <div className='d-flex spmodal'>
                         <Icon name='arb' />
                         <p className='fw500 fs18 lh27'>32 currencies</p>
                       </div>
 
-                      <div className='d-flex align-items-center spmodal'>
+                      <div className='d-flex spmodal'>
                         <Icon name='arb' />
                         <p className='fw500 fs18 lh27'>
                           36 countries & 9 regions
                         </p>
                       </div>
-                      <div className='d-flex align-items-center spmodal'>
+                      <div className='d-flex spmodal'>
                         <Icon name='arb' />
                         <p className='fw500 fs18 lh27'>13 industry sectors </p>
                       </div>
-                      <div className='d-flex align-items-center spmodal'>
+                      <div className='d-flex spmodal'>
                         <Icon name='arb' />
                         <p className='fw500 fs18 lh27'>21 credit ratings </p>
                       </div>
-                      <div className='d-flex align-items-center spmodal'>
+                      <div className='d-flex spmodal'>
                         <Icon name='arb' />
                         <p className='fw500 fs18 lh27'>
                           3 month to 30 year tenors{' '}
                         </p>
                       </div>
-                      <div className='d-flex align-items-center spmodal'>
+                      <div className='d-flex spmodal'>
                         <Icon name='arb' />
                         <p className='fw500 fs18 lh27'>3 tiers </p>
                       </div>
-                      <div className='d-flex align-items-center spmodal'>
+                      <div className='d-flex spmodal'>
                         <Icon name='arb' />
                         <p className='fw500 fs18 lh27'>
                           Fixed & floating rates{' '}
@@ -200,7 +201,7 @@ const EmblaCarousel = ({ slides }) => {
               <div className='embla__slide__inner'>
                 {' '}
                 <div className='item'>
-                  <div className='flex-row-b f-box1'>
+                  <div className='flex-row-b f-box1 f-box3'>
                     <div className='f-box1-left'>
                       <div>
                         {' '}
@@ -227,7 +228,7 @@ const EmblaCarousel = ({ slides }) => {
               <div className='embla__slide__inner'>
                 {' '}
                 <div className='item mt-4'>
-                  <div className='flex-row-b f-box1'>
+                  <div className='flex-row-b f-box1 f-box3'>
                     <div className='f-box1-left'>
                       <div>
                         {' '}
@@ -255,8 +256,7 @@ const EmblaCarousel = ({ slides }) => {
                       </h2>
                       <div className='d-flex'>
                         <p className='fw500 fs20 lh36'>
-                          Secure and encrypted through Microsoft Azure, HTTPS,
-                          SSO, OWASP and more.
+                        Secure and encrypted through Microsoft Azure, HTTPS, SSO, OWASP and more.All servers are based in Germany.
                         </p>
                       </div>
                     </div>

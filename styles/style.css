@@ -29,6 +29,9 @@ a {
 .fs20 {
   font-size: 20px;
 }
+.fs22 {
+  font-size: 22px;
+}
 .fs32 {
   font-size: 32px;
 }
@@ -107,6 +110,13 @@ a {
 .nav-parent .active {
   font-weight: 600;
 }
+.btn-nav:hover {
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+.btn-nav:active,.btn-nav:focus {
+  box-shadow: none!important;
+}
 .btn-nav {
   color: white !important;
   background: #12246c !important;
@@ -139,6 +149,7 @@ a {
   color: #48a6c9;
   margin-top: 32px;
   letter-spacing: -1px;
+  max-width: 406px;
 }
 .herro1 p {
   color: #8797ac;
@@ -147,11 +158,12 @@ a {
   max-width: 406px;
 }
 .herro1-rg img {
-  max-width: 100%;
+  max-width: 850px;
   height: auto;
-  image-rendering: pixelated;
+  /* image-rendering: pixelated; */
   position: relative;
   left: 13%;
+  /* width: 100; */
 }
 .hero-inner {
   padding: 103.5px 0px 84.76px 0px;
@@ -186,6 +198,8 @@ a {
   margin: 32px 0px 22px 0px !important;
   letter-spacing: -1px;
 }
+.benefitcard:hover p {
+  color: #12246C!important;}
 .benefitcard:hover {
   background: #ffffff;
   border: 1px solid #e0e5ee;
@@ -252,13 +266,33 @@ a {
 .owl-nav {
   display: block !important;
 }
-
+.fi1{
+  max-width: 732px!important;
+}
+.fi2{
+  max-width: 698px!important;
+}
+.fi3{
+  max-width: 650px!important;
+}
+.fi4{
+  max-width: 630px!important;
+}
 .f-box1 img {
   width: 100%;
   image-rendering: pixelated;
 }
+.f-box2 {
+  padding: 0px 6.5%!important;
+ 
+}
+.f-box3 {
+  padding: 0px 10.5%!important;
+ 
+}
 .f-box1 {
-  padding: 0px 6%;
+  padding: 0px 4.5%;
+  min-height: 476px;
 }
 .f-box1-left {
   max-height: 424px;
@@ -267,6 +301,7 @@ a {
   align-items: center;
   letter-spacing: -1px;
   color: #12246c;
+  max-width: 380px;
 }
 .f-box1-right h2 {
   color: #48a6c9;
@@ -278,6 +313,7 @@ a {
   max-width: 460px;
   position: relative;
   top: 20px;
+  max-width: 380px;
 }
 .w-100i2 {
   max-width: 448px;
@@ -428,10 +464,14 @@ a {
   border-radius: 10px;
 }
 
+.spmodal  {
+  margin-bottom: 12px;
+  align-items: baseline;
+}
 .spmodal p {
   letter-spacing: -1px;
   max-width: 296px;
-  margin-bottom: 12px;
+ 
 }
 .spmodal svg {
   margin-right: 18px;
@@ -439,7 +479,7 @@ a {
   height: 10px;
 }
 .mx-470 {
-  max-width: 480px !important;
+  max-width: 380px !important;
 }
 .box-main-img {
   background: #ffffff;
@@ -464,6 +504,13 @@ a {
   color: #8797ac;
 }
 
+.solutions-main1 h2 {
+  color: black!important;
+}
+.solutions-main1 h2 a{
+  color: #12246c!important;
+
+}
 .solutions-main h2 {
   color: #12246c;
   letter-spacing: -1px;
@@ -473,9 +520,13 @@ a {
   margin-top: 48px;
   display: flex;
   justify-content: center;
+  margin-left: 5%;
 }
 .scroll-main .active {
   font-weight: 500;
+  color: #12246c !important;
+}
+.mt-scroll-i:hover h3{
   color: #12246c !important;
 }
 .mt-scroll-i {
@@ -491,11 +542,10 @@ a {
 }
 
 .scroll-main h4 span {
-  color: #48a6c9 !important;
-}
+ }
 .scroll-main h4 {
   margin-left: 16px;
-  max-width: 460px;
+  max-width: 520px;
 }
 
 .scroll4::-webkit-scrollbar {
@@ -588,7 +638,7 @@ a {
 .scr-top7 {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   justify-content: flex-end;
 }
 
@@ -735,6 +785,7 @@ a {
 }
 .footer textarea{
   height: 119px;
+  max-width: 562px;
 }
 .erorr{
   color: red;
@@ -760,3 +811,46 @@ height: 41px;
   .iframe .gm-style{
     display: none!important;
   }
+
+
+  blockquote {
+    font-family: Georgia, serif;
+    position: relative;
+    margin: 0.5em;
+    padding: 0.5em 2em 0.5em 3em;
+}
+/* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
+blockquote:before {
+    font-family: Georgia, serif;
+    position: absolute;
+    font-size: 6em;
+    line-height: 1;
+    top: 0;
+    left: 0;
+    content: "\201C";
+}
+blockquote:after {
+    font-family: Georgia, serif;
+    position: absolute;
+   /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+    float:right;
+    font-size:6em;
+    line-height: 1;
+    right:0;
+    bottom:-0.5em;
+    content: "\201D";
+}
+blockquote footer {
+    padding: 0 2em 0 0;
+    text-align:right;
+}
+blockquote cite:before {
+    content: "\2013";
+}
+.error-page
+{
+  min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

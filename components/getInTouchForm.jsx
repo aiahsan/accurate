@@ -12,7 +12,6 @@ const DisplayingErrorMessagesSchema = Yup.object().shape({
   email: Yup.string().required('Required').email(),
   name: Yup.string().required('Required'),
   company: Yup.string().required('Required'),
-  phone: Yup.string().required('Required'),
   message: Yup.string().required('Required'),
 });
 
@@ -80,7 +79,7 @@ export default ({ setshowmessage, setmessage, setshowAnimation ,showAnimation}) 
                 <div className='col-lg-6 '>
                   <input
                     type='text'
-                    placeholder='Name'
+                    placeholder='Name*'
                     className=''
                     {...getFieldProps('name')}
                   />
@@ -91,7 +90,7 @@ export default ({ setshowmessage, setmessage, setshowAnimation ,showAnimation}) 
                 <div className='col-lg-6  '>
                   <input
                     type='text'
-                    placeholder='Email'
+                    placeholder='Email*'
                     className=''
                     {...getFieldProps('email')}
                   />{' '}
@@ -113,13 +112,11 @@ export default ({ setshowmessage, setmessage, setshowAnimation ,showAnimation}) 
                 <div className='col-lg-6 '>
                   <input
                     type='text'
-                    placeholder='Phone*'
+                    placeholder='Phone'
                     className=''
                     {...getFieldProps('phone')}
                   />
-                  {touched.phone && errors.phone && (
-                    <div className='erorr'>{errors.phone}</div>
-                  )}
+                  
                 </div>
                 <div className='col-12  '>
                   <textarea
@@ -127,16 +124,16 @@ export default ({ setshowmessage, setmessage, setshowAnimation ,showAnimation}) 
                     id
                     cols={30}
                     rows={7}
-                    placeholder='Your message'
+                    placeholder='Your message*'
                     className='site-input w-100 p-3'
                     defaultValue={''}
                     {...getFieldProps('message')}
                   />
                   {touched.message && errors.message && (
-                    <div className='erorr'>{errors.message}</div>
+                    <div className='erorr' style={{marginBottom:16}}>{errors.message}</div>
                   )}
                 </div>
-                <div className='col-12  text-center d-flex justify-content-between align-items-center'>
+                <div className='btn-cst-hs3 col-12  text-center d-flex justify-content-between align-items-center'>
                 <div id={containerId} className="g-recaptcha" />
 
                   <button disabled={!captchaResponse} type="submit" className='btn btn-cst' >
