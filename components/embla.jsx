@@ -7,8 +7,7 @@ import useInterval from "./useInterval";
 const EmblaCarousel = ({ slides }) => {
   const [viewportRef, embla] = useEmblaCarousel({
     loop: true,
-    skipSnaps: false
-  });  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
+   });  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
