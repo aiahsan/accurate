@@ -280,7 +280,7 @@ a {
 }
 .f-box1 img {
   width: 100%;
-  image-rendering: pixelated;
+  image-rendering: auto;
 }
 .f-box2 {
   padding: 0px 6.5%!important;
