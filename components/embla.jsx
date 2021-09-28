@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { DotButton, PrevButton, NextButton } from './EmblaCarouselButtons';
 import { useEmblaCarousel } from 'embla-carousel/react';
 import Icon from './icon';
+import useInterval from "./useInterval";
 
 const EmblaCarousel = ({ slides }) => {
   const [viewportRef, embla] = useEmblaCarousel({
@@ -11,12 +12,24 @@ const EmblaCarousel = ({ slides }) => {
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
+  const [delay, setDelay] = useState(5000);
+  const [isRunning, setIsRunning] = useState(true);
 
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
   const scrollTo = useCallback(
     (index) => embla && embla.scrollTo(index),
     [embla]
+  );
+  useInterval(
+    () => {
+      if (selectedIndex === scrollSnaps.length - 1) {
+        scrollTo(0);
+      } else {
+        scrollNext();
+      }
+    },
+    isRunning ? delay : null
   );
 
   const onSelect = useCallback(() => {

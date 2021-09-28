@@ -75,6 +75,19 @@
   .scroll-main {
     flex-direction: column;
   }
+  .scroll-container{
+    overflow: hidden;
+  }
+  .scroll-area{
+    scrollbar-width: none;
+
+  }
+  .scroll-area:nth-of-type(2) h4,.scroll-area:nth-of-type(3) h4,.scroll-area:nth-of-type(4) h4,.scr-top5,.scr-top6{
+    top: 0!important;
+  }
+  .scr-top7{
+    justify-content: flex-start;
+  }
 }
 @media screen and (max-width: 716px) {
   .hero-inner img {
