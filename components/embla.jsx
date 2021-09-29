@@ -20,16 +20,7 @@ const EmblaCarousel = ({ slides }) => {
     (index) => embla && embla.scrollTo(index),
     [embla]
   );
-  useInterval(
-    () => {
-      if (selectedIndex === scrollSnaps.length - 1) {
-        scrollTo(0);
-      } else {
-        scrollNext();
-      }
-    },
-    isRunning ? delay : null
-  );
+ 
 
   const onSelect = useCallback(() => {
     if (!embla) return;
