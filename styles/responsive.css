@@ -23,9 +23,22 @@
 }
 
 @media screen and (max-width: 991px) {
-.embla__button{
+  .embla__button{
   display: none;
 }
+  .nav-separator {
+    display: none;
+  }
+  .btn-nav {
+    margin-bottom: 16px;
+    max-width: 200px;
+  }
+  .btn-nav-login {
+    max-width: 200px;
+  }
+  .nav-right {
+    align-items: flex-start;
+  }
 }
 @media screen and (max-width: 837px) {
   .footer input:nth-child(1)
