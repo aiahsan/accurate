@@ -119,13 +119,26 @@ a {
 }
 .btn-nav {
   color: white !important;
-  background: #12246c !important;
+  background: #48A6C9 !important;
   border-radius: 6px !important;
   padding: 4px 12px !important;
 }
-.nav-right {
-  max-width: 418px;
+.nav-login {
+  color: #12246C !important;
   width: 100%;
+}
+.nav-separator {
+  background: #12246C1A !important;
+  border-radius: 2px;
+  min-width: 2px;
+  height: 32px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.nav-right {
+  max-width: 475px;
+  width: 100%;
+  align-items: center;
   justify-content: space-between;
 }
 .hero-main {
@@ -139,7 +152,7 @@ a {
 .herro1 button {
   padding: 12px 24px !important;
 }
-.herro1 h1 {
+.herro1 h1,.modal-title {
   color: #12246c;
   margin-bottom: 16px;
   max-width: 388px;
@@ -854,4 +867,54 @@ blockquote cite:before {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: #12246c;
+}
+.scheduleBtn {
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 11;
+}
+.scheduleBtn button{
+  background: #48A6C9;
+box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -1px;
+
+color: #FFFFFF;
+}
+.modal-title h4{
+
+}
+.modal-body iframe{
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.modal-90w .modal-content{
+height: 95vh;
+}
+.modal-90w{
+  max-width: 90vw;
+  min-height: 95vh!important;
+  height: 95vh!important;
+  max-height: 95vh!important;
+  margin: auto;
+  margin-top: 2.5vh;
 }
