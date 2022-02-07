@@ -1,10 +1,9 @@
-import Head from 'next/head';
 import BenefitCard from '../components/BenefitCard';
 import Navbar from '../components/navbar';
 import Contact from '../components/getInTouchForm';
 import React, { useRef } from 'react';
 import { Toast } from "react-bootstrap";
-
+import {ScheduleModal} from '../components/modal'
 import {
   Link,
   DirectLink,
@@ -21,6 +20,11 @@ export default function Home() {
   const [message, setmessage] = React.useState("");
   const [showmessage, setshowmessage] = React.useState(false);
   const [showAnimation, setshowAnimation] = React.useState(false);
+
+  const [show, setShow] = React.useState(false);
+  
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const scrollEvent = (e) => {
     const target = e.target;
     if (target.scrollTop >= 240 && target.scrollTop <= 479) {
@@ -39,6 +43,7 @@ export default function Home() {
   };
   const ref = useRef();
   return (
+    <>
     <div>
        {showmessage ? (
         <Toast
@@ -57,12 +62,6 @@ export default function Home() {
       ) : (
         <></>
       )}
-      <Head>
-        <title>Accurate | Financial transfer pricing made easy</title>
-        <meta name='description' content='Accurate | Financial transfer pricing made easy' />
-        <link rel='icon' href='/favicon.ico' />
-        <script src='jquery.min.js'></script>
-      </Head>
       <div className='hero-main'>
         <Navbar />
         <Element name='home'>
@@ -92,7 +91,7 @@ export default function Home() {
               </h2>
             </div>
             <div className='w-100 herro1-rg'>
-              <img src='Hero image.png' />
+              <img src='Hero image - Copy.png' alt="" />
             </div>
           </div>
         </Element>
@@ -334,6 +333,7 @@ export default function Home() {
            */}
                 <div style={{width: '100%', overflow: 'hidden', height: '420px'}}>
                 <iframe
+                  title="google-maps-headquarters"
                   width='100%'
                   height={670}
                   frameBorder={0}
@@ -361,5 +361,10 @@ export default function Home() {
         </div>
       </Element>
     </div>
+    <div className='scheduleBtn'>
+      <button onClick={()=>handleShow()} className='btn'>Schedule a demo</button>
+    </div>
+    <ScheduleModal show={show} handleClose={handleClose}/>
+    </>
   );
 }

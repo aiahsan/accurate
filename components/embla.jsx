@@ -50,7 +50,7 @@ const EmblaCarousel = ({ slides }) => {
                       <div>
                         {' '}
                         <div className='w-100ip'>
-                          <img className='w-100i3 fi1' src='g0.png' />
+                          <img className='w-100i3 fi1' src='g0.png' alt="" />
                         </div>
                       </div>
                     </div>
@@ -78,7 +78,7 @@ const EmblaCarousel = ({ slides }) => {
                       <div>
                         {' '}
                         <div className='w-100ip'>
-                          <img className='w-100i3 fi2' src='g3.png' />
+                          <img className='w-100i3 fi2' src='g3.png' alt="" />
                         </div>
                       </div>
                     </div>
@@ -120,13 +120,13 @@ const EmblaCarousel = ({ slides }) => {
                       <div>
                         {' '}
                         <div className='w-100ip'>
-                          <img className='w-100i3 fi3' src='g4.png' />
+                          <img className='w-100i3 fi3' src='g4.png' alt="" />
                         </div>
                       </div>
                     </div>
                     <div className='f-box1-right mx-470'>
                       <h2 className='fw700 fs18 lh22'>
-                        Automated Report & Agreement Generation
+                        Automated Report &amp; Agreement Generation
                       </h2>
                       <div className='d-flex'>
                         <p className='fw500 fs20 lh36'>
@@ -148,7 +148,7 @@ const EmblaCarousel = ({ slides }) => {
                       <div>
                         {' '}
                         <div className='w-100ip'>
-                          <img className='w-100i3 fi4' src='g5.png' />
+                          <img className='w-100i3 fi4' src='g5.png' alt="" />
                         </div>
                       </div>
                     </div>
@@ -168,7 +168,7 @@ const EmblaCarousel = ({ slides }) => {
                       <div className='d-flex spmodal'>
                         <Icon name='arb' />
                         <p className='fw500 fs18 lh27'>
-                          36 countries & 9 regions
+                          36 countries &amp; 9 regions
                         </p>
                       </div>
                       <div className='d-flex spmodal'>
@@ -192,7 +192,7 @@ const EmblaCarousel = ({ slides }) => {
                       <div className='d-flex spmodal'>
                         <Icon name='arb' />
                         <p className='fw500 fs18 lh27'>
-                          Fixed & floating rates{' '}
+                          Fixed &amp; floating rates{' '}
                         </p>
                       </div>
                     </div>
@@ -209,7 +209,7 @@ const EmblaCarousel = ({ slides }) => {
                       <div>
                         {' '}
                         <div className='w-100ip'>
-                          <img className='w-100i3' src='g6.png' />
+                          <img className='w-100i3' src='g6.png' alt="" />
                         </div>
                       </div>
                     </div>
@@ -237,25 +237,25 @@ const EmblaCarousel = ({ slides }) => {
                         {' '}
                         <div className='d-flex mb-4'>
                           <div className='box-main-img mr-3'>
-                            <img src='a1.png' className='w-100 pl-4 pr-4' />
+                            <img src='a1.png' className='w-100 pl-4 pr-4' alt="" />
                           </div>
                           <div className='box-main-img'>
-                            <img src='a2.png' className='w-100 p-4' />
+                            <img src='a2.png' className='w-100 p-4' alt="" />
                           </div>
                         </div>
                         <div className='d-flex mb-2'>
                           <div className='box-main-img mr-3'>
-                            <img src='a3.png' className='w-100 p-4' />
+                            <img src='a3.png' className='w-100 p-4' alt="" />
                           </div>
                           <div className='box-main-img '>
-                            <img src='a4.png' className='w-100 pl-4 pr-4' />
+                            <img src='a4.png' className='w-100 pl-4 pr-4' alt="" />
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className='f-box1-right mx-470 mtn-5'>
                       <h2 className='fw700 fs18 lh22'>
-                        Fully Secure & Encrypted
+                        Fully Secure &amp; Encrypted
                       </h2>
                       <div className='d-flex'>
                         <p className='fw500 fs20 lh36'>

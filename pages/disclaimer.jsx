@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import BenefitCard from '../components/BenefitCard';
 import Navbar from '../components/navbar';
 import Contact from '../components/getInTouchForm';
@@ -38,13 +37,7 @@ export default function Home() {
     ) : (
       <></>
     )}
-      <Head>
-        <title>Accurate | Financial transfer pricing made easy</title>
-        <meta name='description' content='Accurate | Financial transfer pricing made easy' />
-        <link rel='icon' href='/favicon.ico' />
-        <script src='jquery.min.js'></script>
-      </Head>
-      <div className='hero-main'>
+    <div className='hero-main'>
         <Navbar  showNav={false}/>
       
       </div>
