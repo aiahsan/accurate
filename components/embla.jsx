@@ -205,11 +205,11 @@ const EmblaCarousel = ({ slides }) => {
                 {' '}
                 <div className='item'>
                   <div className='flex-row-b f-box1 f-box3'>
-                    <div className='f-box1-left'>
+                    <div className='f-box1-left m-auto'>
                       <div>
                         {' '}
-                        <div className='w-100ip'>
-                          <img className='w-100i3' src='g6.png' alt="" />
+                        <div className='w-100ip m-cstl'>
+                          <img className='w-100i3' src='g7.png' alt="" />
                         </div>
                       </div>
                     </div>

@@ -68,7 +68,7 @@ const ContactForm = ({ setshowmessage, setmessage, setshowAnimation, showAnimati
           return (
             <Form>
               <p className="psd">
-                Request a 30 minute demo below and let us show you how Accurate™ can benefit your organization
+              Questions or comments? Use the contact form below to get in touch.
               </p>
               <div className="row">
                 <div className="col-lg-6 ">

@@ -15,6 +15,7 @@ import {
 } from 'react-scroll';
 import Embla from '../components/embla';
 import Icon from '../components/icon';
+import moment from 'moment';
 export default function Home() {
   const [activepost, setactivepost] = React.useState(0);
   const [message, setmessage] = React.useState("");
@@ -188,7 +189,7 @@ export default function Home() {
                     Accurate Guarantee™
                   </h3>
                 </div>
-                <div className='mt-scroll-i'>
+                {/* <div className='mt-scroll-i'>
                   <h3
                     onClick={() => {
                       ref.current.scrollTop = 480;
@@ -198,7 +199,7 @@ export default function Home() {
                   >
                     Accurate Back-to-Back™
                   </h3>
-                </div>
+                </div> */}
                 <div className='mt-scroll-i'>
                   {' '}
                   <h3
@@ -354,7 +355,7 @@ export default function Home() {
               <Icon name='logo' />
             </div>
             <div className='d-flex justify-content-between align-items-center footer-end'>
-              <p>All rights reserved © 2021 Accurate</p>
+              <p>All rights reserved © {moment().format("yyyy")} Accurate</p>
               <a href="disclaimer"><h2>Disclaimer</h2></a>
             </div>
           </div>

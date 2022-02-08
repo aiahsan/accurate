@@ -3,6 +3,7 @@ body,
 #root {
   font-family: 'Montserrat', sans-serif;
 }
+
 h1,
 h2,
 h3,
@@ -916,4 +917,7 @@ height: 95vh;
   max-height: 95vh!important;
   margin: auto;
   margin-top: 2.5vh;
+}
+.m-cstl{
+  /* margin-left:8%!important; */
 }
